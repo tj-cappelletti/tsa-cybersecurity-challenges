@@ -1,3 +1,11 @@
+---
+auth_required: false
+draft: false
+hidden: false
+route: rules
+title: "Event Rules"
+---
+
 # PA-TSA Cybersecurity - High School
 
 ## Overview
