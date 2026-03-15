@@ -23,7 +23,7 @@ Students will compete as a team in this event. Please reference the [Event Matri
 - The top ten (10) finalists are announced at the awards ceremony.
 
 ## Regulations and Requirements
-Students will work to develop their leadership and 21st21st-centurylls in the process of preparing for and participating in this TSA competitive event.
+Students will work to develop their leadership and 21st-centurylls in the process of preparing for and participating in this TSA competitive event.
 The development and application of those skills must be evident in their submission, demonstration, and/or communication pertaining to the entry.
 
 - Participants should concentrate their efforts prior to the competition on researching, understanding, and practicing all aspects of cybersecurity. Please refer to the sample challenge topics listed below and the resources on the TSA website.
