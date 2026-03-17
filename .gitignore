@@ -1,2 +1,5 @@
 # Ignore CTFd's CLI configuration folder
 .ctf/
+
+# Ignore Go build artifacts
+**/src/**/*.exe

@@ -1,0 +1,2 @@
+*.exe filter=lfs diff=lfs merge=lfs -text
+challenges/capstone-malware-analysis/dist/capstone-malware-analysis filter=lfs diff=lfs merge=lfs -text
