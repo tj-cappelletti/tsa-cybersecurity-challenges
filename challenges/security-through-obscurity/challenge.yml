@@ -1,0 +1,47 @@
+# Required sections
+name: Security Through Obscurity
+author: "PA TSA Cybersecurity Coordinator"
+category: Cryptography
+description: |
+  An engineer has been tasked with creating a secure way to send passwords to their coworkers.
+  They think they have come up with a great solution, but a few seem to think it can be easily broken.
+  Can you figure out how to get the password?
+
+  ### Shared Value
+  `ZmxhZ3thNDZjZGIyNy03ZGNiLTRlNTAtODM2Mi1mNGM0YTczNGU3NTN9`
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 100
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+# Easy challenge, limited to two attempts
+attempts: 2
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+# Flags specify answers that your challenge use. You should generally provide at least one.
+# Can be removed if unused
+# Accepts strings or dictionaries of CTFd API data
+flags:
+    - flag{a46cdb27-7dcb-4e50-8362-f4c4a734e753}
+
+# Hints are used to give players a way to buy or have suggestions. They are not
+# required but can be nice.
+# Can be removed if unused
+# Accepts dictionaries or strings
+hints:
+    - title: Tooling Hint
+      content: Try using CyberChef's "Magic" operation to automatically detect the encoding type.
+      cost: 50
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
