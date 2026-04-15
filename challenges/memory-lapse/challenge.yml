@@ -1,0 +1,45 @@
+# Required sections
+name: Memory Lapse
+author: "PA TSA Cybersecurity Coordinator"
+category: Forensics
+description: |
+  A workstation was suspected of running malicious software.
+  Before it could be shut down properly, a memory dump was captured.
+  Analyze the memory dump and uncover what was running.
+  The flag is hidden in an environment variable of a suspicious process.
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 400
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+# All hard forensics challenges should be limited to 3 attempts to encourage careful analysis and prevent brute-force guessing.
+attempts: 3
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{ce6ba781-42fb-4186-8a45-30ce8b3bfdb8}
+
+# Provide paths to files from the same directory that this file is in
+files:
+    - dist/memory.dmp
+
+hints:
+    - title: Tooling Hint
+      content: Volatility is the industry-standard tool for memory forensics. Start by identifying running processes.
+      cost: 50
+    - title: Command Hint
+      content: Once you identify a suspicious process, look at its environment variables using Volatility's `envars` plugin.
+      cost: 100
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

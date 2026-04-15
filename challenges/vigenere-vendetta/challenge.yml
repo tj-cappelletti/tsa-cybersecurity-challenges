@@ -1,0 +1,42 @@
+# Required sections
+name: Vigenère Vendetta
+author: "PA TSA Cybersecurity Coordinator"
+category: Cryptography
+description: |
+  A spy left behind an encrypted note.
+  Intelligence suggests the key is a common English word related to security.
+  Can you break the cipher and read the message?
+
+  ### Ciphertext
+  `Czggj Iadxj: czbv{c68yz1z2-n9n5-4k03-z35k-k10z3z56c8zn}`
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 300
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{f68ef1e2-d9d5-4b03-a35c-b10a3e56f8ed}
+
+hints:
+    - title: Cipher Hint
+      content: Unlike a Caesar cipher, this one uses a keyword to shift each letter by a different amount.
+      cost: 50
+    - title: Key Hint
+      content: The key is a 5-letter word you hear every day in this competition.
+      cost: 75
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

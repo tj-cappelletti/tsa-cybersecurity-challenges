@@ -1,0 +1,43 @@
+# Required sections
+name: Pixel Perfect
+author: "PA TSA Cybersecurity Coordinator"
+category: Steganography
+description: |
+  This image looks like any other — but hidden within its pixels is a secret message.
+  The human eye can't detect it, but the right tool can.
+  Can you extract the hidden data?
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 300
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{2eb7323f-fdfe-4dd7-861b-06a5e7f3b972}
+
+# Provide paths to files from the same directory that this file is in
+files:
+    - dist/image.png
+
+hints:
+    - title: Concept Hint
+      content: The least significant bit of each color channel can store data without visibly changing an image. This technique is called LSB steganography.
+      cost: 50
+    - title: Tooling Hint
+      content: Tools like `zsteg` (for PNG) or `stegsolve` can detect and extract LSB-encoded data.
+      cost: 75
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

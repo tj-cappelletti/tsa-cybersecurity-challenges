@@ -1,0 +1,42 @@
+# Required sections
+name: Robots.txt Recon
+author: "PA TSA Cybersecurity Coordinator"
+category: Web Exploitation
+description: |
+  Every good recon starts with the basics.
+  This website is hiding something it doesn't want search engines to index.
+  Can you find it?
+
+  ### Target
+  http://web-01.ctf.local
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 100
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{a27c7ad2-783b-4179-9886-d919f3fdea1a}
+
+hints:
+    - title: Concept Hint
+      content: Websites use a special file to tell search engine crawlers which paths to avoid. What if those paths have something interesting?
+      cost: 25
+    - title: Path Hint
+      content: Navigate to `/robots.txt` on the target site and look at the `Disallow` entries.
+      cost: 50
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

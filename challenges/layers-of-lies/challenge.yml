@@ -1,0 +1,44 @@
+# Required sections
+name: Layers of Lies
+author: "PA TSA Cybersecurity Coordinator"
+category: Steganography
+description: |
+  This image looks perfectly normal — just a photo someone shared online.
+  But appearances can be deceiving.
+  There's something hidden inside this file that shouldn't be there.
+  Can you find it?
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 200
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{e106dcbe-e060-49b9-9166-e23230f85cf9}
+
+# Provide paths to files from the same directory that this file is in
+files:
+    - dist/image.jpg
+
+hints:
+    - title: Concept Hint
+      content: Some tools allow you to embed entire files inside an image. The hidden file may have its own contents worth reading.
+      cost: 50
+    - title: Tooling Hint
+      content: Try `binwalk` or `foremost` to detect and extract embedded files.
+      cost: 75
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

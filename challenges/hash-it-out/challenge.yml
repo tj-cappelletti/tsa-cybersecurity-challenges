@@ -1,0 +1,42 @@
+# Required sections
+name: Hash It Out
+author: "PA TSA Cybersecurity Coordinator"
+category: Cryptography
+description: |
+  A developer stored a password using a very old and broken hashing algorithm.
+  We've pulled the hash from the database — can you crack it and recover the original password?
+  Submit the cracked password wrapped in the flag format: `flag{<cracked_password>}`
+
+  ### Hash
+  `5f4dcc3b5aa765d61d8327deb882cf99`
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 300
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{5743d32c-7804-47ae-aa12-e737f2ef07f6}
+
+hints:
+    - title: Algorithm Hint
+      content: This hashing algorithm was deprecated years ago for being too weak. It produces a 32-character hex digest.
+      cost: 50
+    - title: Wordlist Hint
+      content: The password is a very common word found in any standard wordlist. Try rockyou.txt or CyberChef's "Magic" operation.
+      cost: 75
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

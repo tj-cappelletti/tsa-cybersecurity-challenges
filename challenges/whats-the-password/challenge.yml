@@ -1,0 +1,49 @@
+# Required sections
+name: What's the Password?
+author: "PA TSA Cybersecurity Coordinator"
+category: Reverse Engineering
+description: |
+  This program asks for a password.
+  The developer swore it was secure because they compiled it.
+  Prove them wrong.
+  Find the correct password, and the program will reveal the flag.
+
+  ### Running the binary
+  ```
+  ./whats-the-password
+  ```
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 300
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{405d511f-9ddf-4d29-b826-f5804d7ae1df}
+
+# Provide paths to files from the same directory that this file is in
+files:
+    - dist/whats-the-password
+
+hints:
+    - title: Concept Hint
+      content: Compiled programs still contain their logic — it's just in machine code. Decompilers can turn that back into readable code.
+      cost: 50
+    - title: Tooling Hint
+      content: Try loading the binary into Ghidra or running `ltrace`/`strace` to observe what comparisons the program makes at runtime.
+      cost: 75
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

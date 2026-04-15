@@ -1,0 +1,43 @@
+# Required sections
+name: Strings Attached
+author: "PA TSA Cybersecurity Coordinator"
+category: Reverse Engineering
+description: |
+  Someone compiled a secret into this binary, thinking nobody would notice.
+  You don't need to understand assembly to find it.
+  Sometimes the answer is right there in plain text — if you know where to look.
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 100
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{141cd0f6-0970-433b-b6c6-898b0da6b5c3}
+
+# Provide paths to files from the same directory that this file is in
+files:
+    - dist/strings-attached
+
+hints:
+    - title: Tooling Hint
+      content: The `strings` command extracts human-readable text from binary files. Try running it and piping the output to `grep`.
+      cost: 25
+    - title: Format Hint
+      content: You're looking for something that starts with `flag{`.
+      cost: 50
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

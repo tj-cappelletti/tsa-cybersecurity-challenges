@@ -1,0 +1,43 @@
+# Required sections
+name: What's in the Wire
+author: "PA TSA Cybersecurity Coordinator"
+category: Forensics
+description: |
+  Our network monitoring system captured some suspicious traffic last Tuesday.
+  Someone was sending data they shouldn't have been.
+  Analyze the packet capture and find out what was transmitted.
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 300
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{c1ea4419-2512-4b54-9126-132c6eb528cb}
+
+# Provide paths to files from the same directory that this file is in
+files:
+    - dist/capture.pcap
+
+hints:
+    - title: Tooling Hint
+      content: Wireshark is your best friend here. Try filtering by protocol to narrow down interesting traffic.
+      cost: 50
+    - title: Protocol Hint
+      content: The data was sent using an unencrypted protocol. Look for HTTP traffic and inspect the request/response bodies.
+      cost: 75
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

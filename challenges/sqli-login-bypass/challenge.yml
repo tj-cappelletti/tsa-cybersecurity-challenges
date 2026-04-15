@@ -1,0 +1,42 @@
+# Required sections
+name: SQLi Login Bypass
+author: "PA TSA Cybersecurity Coordinator"
+category: Web Exploitation
+description: |
+  This login form looks secure at first glance.
+  But the developer forgot one of the most fundamental rules of web security: never trust user input.
+  Can you get in without knowing the password?
+
+  ### Target
+  http://web-03.ctf.local
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 300
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{1dc3c081-24c8-4b35-bf7b-21c836f111a3}
+
+hints:
+    - title: Concept Hint
+      content: When user input is inserted directly into a database query without sanitization, an attacker can manipulate the query logic.
+      cost: 50
+    - title: Payload Hint
+      content: Try entering a single quote `'` in the username field and observe the response. What happens?
+      cost: 75
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
