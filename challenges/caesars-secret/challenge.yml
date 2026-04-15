@@ -1,0 +1,42 @@
+# Required sections
+name: Caesar's Secret
+author: "PA TSA Cybersecurity Coordinator"
+category: Cryptography
+description: |
+  Someone left an encoded message on the whiteboard before leaving for the weekend.
+  The other engineers are convinced it's just nonsense, but you have a feeling it means something.
+  Can you figure out what it says?
+
+  ### Encoded Message
+  `Iyeh uhnyx: iusq{s46pqh27-7qph-4r50-8362-s4p4n734r753}`
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 100
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{f292716e-6f54-4e40-91a3-5879917f00f9}
+
+hints:
+    - title: Category Hint
+      content: This is one of the oldest known ciphers in history. Julius would know.
+      cost: 25
+    - title: Tooling Hint
+      content: Try CyberChef's ROT13 operation — but remember, 13 may not be the magic number here.
+      cost: 50
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

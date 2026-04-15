@@ -1,0 +1,39 @@
+# Required sections
+name: Source of Truth
+author: "PA TSA Cybersecurity Coordinator"
+category: Web Exploitation
+description: |
+  Developers sometimes leave things in their code they shouldn't.
+  This website looks normal on the surface, but take a peek behind the curtain.
+  The flag is hiding somewhere in the page source.
+
+  ### Target
+  http://web-04.ctf.local
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 100
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{1a8b0871-dd7c-4f64-8f22-263471fc3cf4}
+
+hints:
+    - title: Tooling Hint
+      content: Right-click the page and select "View Page Source", or press Ctrl+U. Look carefully — not everything that's in the code shows up on screen.
+      cost: 25
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

@@ -1,0 +1,45 @@
+# Required sections
+name: Many Times the Key
+author: "PA TSA Cybersecurity Coordinator"
+category: Cryptography
+description: |
+  An intern thought XOR was a secure encryption method and used the same short key to encrypt a secret message.
+  The ciphertext is provided as a hex string below.
+  Can you recover the plaintext?
+
+  ### Ciphertext (hex)
+  `1a0b1e1c5f1d074f120a1e035f061d074f`
+
+  ### Hint
+  The key is a common 3-letter word.
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 200
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{7d9d6954-0d33-4edc-8064-a489843919e0}
+
+hints:
+    - title: Key Length Hint
+      content: The key is exactly 3 characters long. Try common short English words.
+      cost: 50
+    - title: Tooling Hint
+      content: CyberChef has an XOR Brute Force operation that can help narrow down short keys.
+      cost: 75
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

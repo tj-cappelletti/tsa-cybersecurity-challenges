@@ -1,0 +1,44 @@
+# Required sections
+name: Deleted But Not Gone
+author: "PA TSA Cybersecurity Coordinator"
+category: Forensics
+description: |
+  A suspect deleted a file from their USB drive before handing it over to investigators.
+  Luckily, deleted doesn't always mean gone.
+  A forensic image of the drive has been provided.
+  Can you recover the deleted file and find the flag?
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 200
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{590d9891-dfca-4335-8e18-72b19fae47aa}
+
+# Provide paths to files from the same directory that this file is in
+files:
+    - dist/disk.dd
+
+hints:
+    - title: Concept Hint
+      content: When a file is deleted, the data often remains on disk until overwritten. File carving tools can recover it.
+      cost: 50
+    - title: Tooling Hint
+      content: Try `foremost` or `photorec` to carve files from the disk image.
+      cost: 75
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

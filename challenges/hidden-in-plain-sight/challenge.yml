@@ -1,0 +1,43 @@
+# Required sections
+name: Hidden in Plain Sight
+author: "PA TSA Cybersecurity Coordinator"
+category: Steganography
+description: |
+  Someone hid a message inside this image file.
+  It wasn't very hard to hide, and it won't be very hard to find.
+  Download the image and take a closer look.
+attribution: "PA TSA Cybersecurity Coordinator"
+value: 100
+type: standard
+
+# Unused but listed as required for CTFd compatibility. Can be removed if unused.
+image: null
+protocol: null
+host: null
+
+attempts: 5
+
+# Specifies flag processing behavior of challenge
+# Accept any flag (default): any
+# Require all flags to be provided: all
+# Require all team members to submit any flag: team
+logic: all
+
+flags:
+    - flag{e6015503-4126-440b-973b-9ccf6420c145}
+
+# Provide paths to files from the same directory that this file is in
+files:
+    - dist/image.png
+
+hints:
+    - title: Tooling Hint
+      content: Sometimes the simplest tools reveal the most. Try running `strings` against the file.
+      cost: 25
+    - title: Location Hint
+      content: The flag is stored as plain text appended to the end of the image file.
+      cost: 50
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
